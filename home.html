@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="block">
+      <header>
+        <h1 class="title">Javascript Functions & Stuff</h1>
+      </header>
+      <main>
+        <div class="container">
+          <button class="buttons playButton" onclick="playGame()">Play</button>
+
+          <!-- <button class="playbutton" onclick="restart()">Restart</button> -->
+        </div>
+        <div class="arena">
+          <img
+            src="https://avatarfiles.alphacoders.com/954/95479.png"
+            alt="picture of a knight with sword"
+            class="pic playerPicture"
+          />
+          <div id="player">
+            <h2 class="name">Character</h2>
+            <p>Attack: <span class="pAttack">0</span></p>
+            <p>Health: <span class="pHealth">0</span></p>
+            <p>Weapon: <span class="pWeapon"></span></p>
+          </div>
+          <div id="enemy">
+            <h2 class="monster">Monster</h2>
+            <p>Attack: <span class="eAttack">0</span></p>
+            <p>Health: <span class="eHealth">0</span></p>
+          </div>
+          <img
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c3162551-b1f8-456c-915f-acf24e22777f/d7mv3zs-e360a07a-c708-48d5-a66c-ca2bce69f083.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzMTYyNTUxLWIxZjgtNDU2Yy05MTVmLWFjZjI0ZTIyNzc3ZlwvZDdtdjN6cy1lMzYwYTA3YS1jNzA4LTQ4ZDUtYTY2Yy1jYTJiY2U2OWYwODMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.f6ACDiagCMVYQnZZKXVWmyO5ttgBb8I22vWhVY_oG24"
+            alt=""
+            class="pic enemyPicture"
+          />
+        </div>
+        <p class="desc">.....</p>
+        <div class="container">
+          <button class="buttons attackButton">Attack</button>
+          <button class="buttons healButton">Heal</button>
+          <button class="buttons dodgeButton">Dodge</button>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <h3>Made By Gordon Zam 2023</h3>
+    </footer>
+  </body>
+</html>

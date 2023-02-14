@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Vollkorn:wght@400;500&display=swap');
+
+:root {
+  --red1: rgb(162, 42, 42);
+}
+
+* {
+  /* border: 2px solid red; */
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+  /* font-family: 'Vollkorn', serif; */
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(44, 36, 36);
+  font-size: 0.5rem;
+}
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1.6em 0;
+  color: var(--red1);
+  /* animation: titleAnimation 6s 1s infinite; */
+  position: relative;
+  letter-spacing: 1.5px;
+  background: linear-gradient(0deg, rgb(237, 214, 35) 0%, #c20000 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animation moving title up and increasing its size */
+@keyframes titleAnimation {
+  0% {
+    font-size: 2.5rem;
+    bottom: 0;
+  }
+  50% {
+    font-size: 2.65rem;
+    bottom: 6px;
+  }
+  75% {
+    bottom: 0;
+  }
+  100% {
+    font-size: 2.5rem;
+    bottom: 0;
+  }
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.block {
+  background-color: rgb(230, 230, 230);
+
+  margin: 2em 2em;
+  border-radius: 6px;
+  padding: 2em 0;
+  border: 6px solid var(--red1);
+  /* animation: blockAnimation 6s 1s infinite; */
+  min-height: 95vh;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+}
+
+@keyframes blockAnimation {
+  0% {
+    border: 6px solid var(--red1);
+  }
+  50% {
+    border: 10px solid var(--red1);
+  }
+  100% {
+    border: 6px solid var(--red1);
+  }
+}
+
+.arena {
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 6em;
+}
+
+.buttons {
+  margin: 1em 2em;
+  font-size: 1rem;
+  padding: 0.4em 2em;
+  background-color: rgb(114, 114, 114);
+  /* border: 2px rgb(255, 255, 255) solid; */
+  border-radius: 0.4em;
+  color: rgb(233, 223, 223);
+  transition: 150ms linear;
+  top: 0;
+  left: 0;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  border: none;
+  box-shadow: -5px 5px 0 rgb(47, 47, 47);
+}
+.buttons:hover {
+  color: var(--red1);
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 rgb(47, 47, 47);
+  cursor: pointer;
+}
+/* .buttons:after {
+  top: 1px;
+  left: -2px;
+  width: 4px;
+  height: 4px;
+}
+.buttons::before {
+  bottom: -2px;
+  right: 1px;
+  width: 4px;
+  height: 4px;
+} */
+
+.buttons:active {
+  background-color: black;
+}
+/* chaning the disabled button look */
+.buttons:disabled {
+  color: rgb(0, 0, 0);
+  background-color: rgb(68, 68, 68);
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 rgb(47, 47, 47);
+}
+
+.playButton {
+  margin: 0.4em 2em;
+  font-size: 1.2rem;
+  padding: 0.4em 2em;
+}
+
+.playerPicture {
+  width: 200px;
+  height: 200px;
+  border: 5px solid rgb(243, 243, 243);
+  -moz-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.7);
+  -webkit-box-shadow: 0 13px 12px rgba(34, 25, 25, 0.7);
+  margin: 0;
+  animation: pictureAnimation 5s 1s infinite;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 30% 70% 70% 30% / 30% 26% 74% 70%;
+}
+
+@keyframes pictureAnimation {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.enemyPicture {
+  width: 200px;
+  height: 200px;
+  border: 5px solid rgb(31, 31, 31);
+  -moz-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.7);
+  -webkit-box-shadow: 0 13px 12px rgba(34, 25, 25, 0.7);
+  margin: 0;
+  object-fit: cover;
+  animation: pictureAnimation2 5.4s 3s infinite;
+  position: relative;
+  border-radius: 44% 56% 23% 77% / 56% 49% 51% 44%;
+}
+
+@keyframes pictureAnimation2 {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+h3 {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Media queries for responsive design, resizing/positioning adjustments to fit screen better */
+@media (max-width: 640px) {
+  .playerPicture {
+    width: 100px;
+    height: 100px;
+    border: 4px solid rgb(243, 243, 243);
+  }
+  .enemyPicture {
+    width: 100px;
+    height: 100px;
+    border: 4px solid rgb(31, 31, 31);
+  }
+  .block {
+    margin: 1em 0.5em;
+    padding: 1em 0;
+    border: 4px solid var(--red1);
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+  .buttons {
+    margin: 1em 1em;
+    font-size: 0.8rem;
+    padding: 0.4em 1em;
+    letter-spacing: 0;
+  }
+  .playButton {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 990px) {
+  .playerPicture {
+    width: 140px;
+    height: 140px;
+    border: 4px solid rgb(243, 243, 243);
+  }
+  .enemyPicture {
+    width: 140px;
+    height: 140px;
+    border: 4px solid rgb(31, 31, 31);
+  }
+  .block {
+    margin: 1em 1em;
+    padding: 1em 0;
+    border: 4px solid var(--red1);
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
